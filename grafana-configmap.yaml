@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-config
+  namespace: monitoring
+data:
+  grafana.ini: |
+    [smtp]
+    enabled = true
+    host = smtp.office365.com:587
+    user = shanmugha13@outlook.com
+    password = Shanu@13@outlook
+    from_address = shanmugha13@outlook.com
+    from_name = Grafana Notifications
+    skip_verify = true
+    startTLS = true
+    [emails]
+    welcome_email_on_sign_up = false
+    templates_pattern = emails/*.html, emails/*.txt
+    content_types = text/html

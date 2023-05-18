@@ -1,0 +1,6 @@
+# kubectl create namespace monitoring
+ 
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: monitoring
